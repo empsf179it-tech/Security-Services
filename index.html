@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Shieldcore Security - Advanced security solutions designed to protect people, businesses, properties, and critical environments.">
+    <title>Shieldcore Security | Advanced Protection</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="main-header">
+        <nav class="navbar custom-navbar">
+            <div class="container-fluid px-4 px-lg-5">
+                <!-- Logo -->
+                <a href="#home" class="navbar-brand d-flex align-items-center">
+                    <span class="logo-shield d-inline-flex align-items-center me-2"><img src="assets/images/logo.svg" alt="Shieldcore" width="32" height="32"></span>
+                    <span class="logo-text">SHIELDCORE</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="desktop-menu d-none d-xl-flex align-items-center">
+                    <ul class="nav-links">
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+
+                        <!-- Services Dropdown -->
+                        <li class="dropdown-wrapper">
+                            <a href="#services">Services <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu-custom">
+                                <li><a href="#corporate-security">Corporate Security</a></li>
+                                <li><a href="#residential-security">Residential Security</a></li>
+                                <li><a href="#event-security">Event Security</a></li>
+                                <li><a href="#surveillance">Surveillance & Monitoring</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Industries Dropdown -->
+                        <li class="dropdown-wrapper">
+                            <a href="#industries">Industries <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu-custom">
+                                <li><a href="#it-companies">IT Companies</a></li>
+                                <li><a href="#apartments">Apartments</a></li>
+                                <li><a href="#bank-security">Banks & Financial</a></li>
+                                <li><a href="#retail-security">Shopping Malls</a></li>
+                                <li><a href="#healthcare">Healthcare</a></li>
+                                <li><a href="#airports">Airports</a></li>
+                                <li><a href="#theatres">Theatres</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Technology Dropdown -->
+                        <li class="dropdown-wrapper">
+                            <a href="#technology">Technology <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu-custom">
+                                <li><a href="#cctv-surveillance">CCTV Surveillance</a></li>
+                                <li><a href="#access-control">Access Control</a></li>
+                                <li><a href="#visitor-management">Visitor Management</a></li>
+                                <li><a href="#alarm-systems">Alarm Systems</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Theme Toggle & Actions -->
+                <div class="nav-actions ms-lg-4 d-flex align-items-center">
+                    <button id="theme-toggle" class="theme-btn me-3" aria-label="Toggle Dark Mode">
+                        <i class="fa-solid fa-sun"></i>
+                    </button>
+                    <a href="#contact" class="btn-premium btn-primary-premium d-none d-xl-inline-flex">Request Assessment</a>
+
+                    <!-- Mobile Toggle -->
+                    <button id="mobile-menu-toggle" class="d-xl-none mobile-btn" aria-label="Menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation Panel -->
+    <div id="nav-overlay" class="nav-overlay"></div>
+    <aside id="mobile-nav-panel" class="mobile-nav-panel">
+        <div class="mobile-nav-header d-flex align-items-center">
+            <span class="logo-shield d-inline-flex align-items-center me-2"><img src="assets/images/logo.svg" alt="Shieldcore" width="32" height="32"></span>
+            <span class="logo-text">SHIELDCORE</span>
+        </div>
+        <div class="mobile-nav-content">
+            <ul class="mobile-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li>
+                    <a href="#services" class="mobile-dropdown-toggle">Services <i
+                            class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="mobile-dropdown-content">
+                        <li><a href="#corporate-security">Corporate Security</a></li>
+                        <li><a href="#residential-security">Residential Security</a></li>
+                        <li><a href="#event-security">Event Security</a></li>
+                        <li><a href="#surveillance">Surveillance & Monitoring</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#industries" class="mobile-dropdown-toggle">Industries <i
+                            class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="mobile-dropdown-content">
+                        <li><a href="#it-companies">IT Companies</a></li>
+                        <li><a href="#apartments">Apartments</a></li>
+                        <li><a href="#bank-security">Banks & Financial</a></li>
+                        <li><a href="#retail-security">Shopping Malls</a></li>
+                        <li><a href="#healthcare">Healthcare</a></li>
+                        <li><a href="#airports">Airports</a></li>
+                        <li><a href="#theatres">Theatres</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#technology" class="mobile-dropdown-toggle">Technology <i
+                            class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="mobile-dropdown-content">
+                        <li><a href="#cctv-surveillance">CCTV Surveillance</a></li>
+                        <li><a href="#access-control">Access Control</a></li>
+                        <li><a href="#visitor-management">Visitor Management</a></li>
+                        <li><a href="#alarm-systems">Alarm Systems</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile-nav-footer">
+            <a href="#contact" class="btn-premium btn-primary-premium w-100 mb-3">Request Assessment</a>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- 01 - HERO SECTION (3D) -->
+        <section id="home" class="hero-section">
+            <div id="three-canvas-container"></div>
+
+            <div class="container hero-content-wrapper d-flex align-items-center h-100">
+                <div class="row w-100 m-0 justify-content-center text-center">
+                    <div class="col-lg-8 text-white">
+                        <div class="hero-label mb-3 text-accent">
+                            <i class="fa-solid fa-shield-check me-2"></i> 24/7 PROFESSIONAL SECURITY
+                        </div>
+                        <h1 class="hero-title display-3 fw-bold mb-4">Protection That Never<br>Takes a Break.</h1>
+                        <p class="hero-subtitle lead mb-5 mx-auto">
+                            Advanced security personnel, intelligent surveillance, and dependable protection solutions
+                            for businesses, properties, and people.
+                        </p>
+                        <div class="hero-ctas d-flex flex-column flex-md-row justify-content-center gap-3">
+                            <a href="#contact" class="btn-premium btn-primary-premium">Request Security Assessment</a>
+                            <a href="#services" class="btn-premium btn-outline-premium">Explore Our Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other sections will go here... -->
+
+        <!-- 02 - SECURITY PROMISE (About/Trust) -->
+        <section id="about" class="section-padding bg-primary-custom relative-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="content-wrapper pe-lg-5">
+                            <h5 class="text-accent mb-3">TRUST & PROTECTION</h5>
+                            <h2 class="display-5 fw-bold mb-4">People. Property. Technology. <span
+                                    class="text-accent">Protection.</span></h2>
+                            <p class="lead mb-4 text-secondary">
+                                We don't just provide security personnel; we engineer comprehensive security
+                                environments. By combining rigorous training with advanced surveillance technology, we
+                                deliver a zero-compromise approach to your safety.
+                            </p>
+                            <ul class="feature-list mb-5">
+                                <li><i class="fa-solid fa-check text-accent me-3"></i> Highly Trained Professionals</li>
+                                <li><i class="fa-solid fa-check text-accent me-3"></i> 24/7 Command Center Monitoring
+                                </li>
+                                <li><i class="fa-solid fa-check text-accent me-3"></i> Rapid Incident Response</li>
+                            </ul>
+                            <a href="#about" class="btn-premium btn-outline-premium">Discover Our Philosophy</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="asymmetric-image-grid">
+                            <div class="img-box img-1">
+                                <div class="glow-border"></div>
+                                <img src="assets/images/Security%20Guard.png"
+                                    alt="Security Guard" class="img-fluid rounded w-100" style="object-fit: cover; min-height: 400px;">
+                            </div>
+                            <div class="img-box img-2 mt-5">
+                                <div class="glow-border"></div>
+                                <img src="assets/images/24%207%20CCTV%20Command%20Center.png"
+                                    alt="CCTV Command Center" class="img-fluid rounded shadow-lg w-100" style="object-fit: cover; min-height: 350px;">
+                            </div>
+                            <div class="floating-badge">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Certified Protection</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 - SECURITY SERVICES -->
+        <section id="services" class="section-padding bg-secondary-custom">
+            <div class="container">
+                <div class="row mb-5 justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h5 class="text-accent mb-3">OUR EXPERTISE</h5>
+                        <h2 class="display-5 fw-bold mb-4">Comprehensive Security Solutions</h2>
+                        <p class="text-secondary lead">Tailored protection strategies designed for diverse environments
+                            and specialized requirements.</p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Service Item (Large) -->
+                    <div id="corporate-security" class="col-lg-8 col-md-12">
+                        <div class="service-card large-card h-100">
+                            <div class="card-bg"
+                                style="background-image: url('assets/images/Corporate%20%26%20Office%20Security.png');">
+                            </div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <h3>Corporate & Office Security</h3>
+                                <p>Executive protection, visitor management, and access control for modern workplaces.
+                                </p>
+                                <a href="#services" class="service-link">View Details <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Item (Small) -->
+                    <div id="residential-security" class="col-lg-4 col-md-6">
+                        <div class="service-card h-100">
+                            <div class="card-bg"
+                                style="background-image: url('assets/images/Residential.png'); background-position: right center;">
+                            </div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <h3>Residential</h3>
+                                <p>Apartment and gated community safety.</p>
+                                <a href="#services" class="service-link">View Details <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Item (Small) -->
+                    <div id="event-security" class="col-lg-4 col-md-6">
+                        <div class="service-card h-100">
+                            <div class="card-bg"
+                                style="background-image: url('assets/images/Event%20Security.png');">
+                            </div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <h3>Event Security</h3>
+                                <p>Crowd control and VIP protection.</p>
+                                <a href="#services" class="service-link">View Details <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Item (Medium) -->
+                    <div id="surveillance" class="col-lg-8 col-md-12">
+                        <div class="service-card h-100">
+                            <div class="card-bg"
+                                style="background-image: url('assets/images/Surveillance%20%26%20Monitoring.png');">
+                            </div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <h3>Surveillance & Monitoring</h3>
+                                <p>24/7 CCTV monitoring and rapid response coordination from our command center.</p>
+                                <a href="#services" class="service-link">View Details <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 - INTERACTIVE INDUSTRY MAP -->
+        <section id="industries" class="section-padding bg-primary-custom overflow-hidden">
+            <div class="container relative-section">
+                <div class="row text-center mb-5">
+                    <div class="col-12">
+                        <h5 class="text-accent mb-3">WHERE WE OPERATE</h5>
+                        <h2 class="display-5 fw-bold">Industries We Protect</h2>
+                    </div>
+                </div>
+
+                <div class="industry-map-container">
+                    <div class="center-node">
+                        <div class="shield-pulse"></div>
+                        <i><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></i>
+                        <span>SHIELDCORE</span>
+                    </div>
+
+                    <div class="industry-nodes">
+                        <!-- Nodes generated via CSS/JS -->
+                        <a href="#industries" class="industry-node pos-1">
+                            <i><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zm-8-2H4V6h16v10h-4zM9 10l-3 2 3 2 1.4-1.4L8.8 11l1.6-1.6L9 10zm6 0l-1.4 1.4 1.6 1.6-1.6 1.6L15 14l3-2-3-2z"/></svg></i>
+                            <div class="node-tooltip">IT Companies</div>
+                        </a>
+                        <a href="#services" class="industry-node pos-2">
+                            <i><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M4 10h3v7H4zm6.5 0h3v7h-3zM2 19h20v3H2zm15-9h3v7h-3zm-5-9L2 6v2h20V6z"/></svg></i>
+                            <div class="node-tooltip">Banking</div>
+                        </a>
+                        <a href="#industries" class="industry-node pos-3">
+                            <i><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></i>
+                            <div class="node-tooltip">Healthcare</div>
+                        </a>
+                        <a href="#industries" class="industry-node pos-4">
+                            <i><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"/></svg></i>
+                            <div class="node-tooltip">Retail</div>
+                        </a>
+                        <a href="#industries" class="industry-node pos-5">
+                            <i><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></i>
+                            <div class="node-tooltip">Airports</div>
+                        </a>
+                        <a href="#industries" class="industry-node pos-6">
+                            <i><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/></svg></i>
+                            <div class="node-tooltip">Theatres</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05 - 11 INDUSTRY HIGHLIGHTS -->
+        <section class="industry-highlights">
+            <!-- 05 IT Company Security -->
+            <div id="it-companies" class="industry-row section-padding border-bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 mb-4 mb-lg-0">
+                            <h5 class="text-accent">01 / IT & TECH PARKS</h5>
+                            <h3 class="display-6 fw-bold mb-3">Security Built for Modern Workplaces</h3>
+                            <p class="text-secondary mb-4">Protecting critical infrastructure, server rooms, and
+                                intellectual property while maintaining a welcoming environment for employees and
+                                visitors.</p>
+                            <a href="#industries" class="btn-outline-premium btn-premium">Explore IT Security</a>
+                        </div>
+                        <div class="col-lg-6 offset-lg-1">
+                            <div class="img-box glow-container">
+                                <img src="assets/images/Security%20Built%20for%20Modern%20Workplaces.png"
+                                    class="img-fluid rounded shadow-lg w-100" style="object-fit: cover;" alt="Security Built for Modern Workplaces">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 06 Apartment Security -->
+            <div id="apartments" class="industry-row section-padding bg-secondary-custom border-bottom">
+                <div class="container">
+                    <div class="row align-items-center flex-row-reverse">
+                        <div class="col-lg-5 mb-4 mb-lg-0">
+                            <h5 class="text-accent">02 / RESIDENTIAL</h5>
+                            <h3 class="display-6 fw-bold mb-3">A Safer Community Starts at the Gate</h3>
+                            <p class="text-secondary mb-4">Advanced visitor management, 24/7 patrol, and access control
+                                systems designed specifically for premium apartment complexes.</p>
+                            <a href="#services" class="btn-outline-premium btn-premium">Explore Residential Security</a>
+                        </div>
+                        <div class="col-lg-6 me-auto">
+                            <div class="img-box glow-container">
+                                <img src="assets/images/A%20Safer%20Community%20Starts%20at%20the%20Gate.png"
+                                    class="img-fluid rounded shadow-lg w-100" style="object-fit: cover;" alt="A Safer Community Starts at the Gate">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 07 Banking Security -->
+            <div id="bank-security" class="industry-row section-padding border-bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 mb-4 mb-lg-0">
+                            <h5 class="text-accent">03 / FINANCIAL</h5>
+                            <h3 class="display-6 fw-bold mb-3">Protecting Every Transaction</h3>
+                            <p class="text-secondary mb-4">High-threat environment protection with specialized
+                                armed/unarmed personnel and advanced cash-area monitoring.</p>
+                            <a href="#services" class="btn-outline-premium btn-premium">Explore Bank Security</a>
+                        </div>
+                        <div class="col-lg-6 offset-lg-1">
+                            <div class="img-box glow-container">
+                                <img src="assets/images/Protecting%20Every%20Transaction.png"
+                                    class="img-fluid rounded shadow-lg w-100" style="object-fit: cover;" alt="Protecting Every Transaction">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 08-11 Combined grid for brevity on homepage -->
+            <div class="section-padding bg-secondary-custom">
+                <div class="container">
+                    <div class="row mb-5 text-center">
+                        <div class="col-12">
+                            <h2 class="display-6 fw-bold">Specialized Environments</h2>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div id="retail-security" class="col-md-6">
+                            <div class="service-card" style="min-height: 250px;">
+                                <div class="card-bg"
+                                    style="background-image: url('assets/images/Retail%20%26%20Malls.png'); background-position: top center;">
+                                </div>
+                                <div class="card-overlay"></div>
+                                <div
+                                    class="card-content p-3 text-center w-100 h-100 d-flex flex-column justify-content-center">
+                                    <h4 class="mb-2">Retail & Malls</h4>
+                                    <a href="#industries" class="text-accent small">Learn More <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="healthcare" class="col-md-6">
+                            <div class="service-card" style="min-height: 250px;">
+                                <div class="card-bg"
+                                    style="background-image: url('assets/images/Healthcare.png');">
+                                </div>
+                                <div class="card-overlay"></div>
+                                <div
+                                    class="card-content p-3 text-center w-100 h-100 d-flex flex-column justify-content-center">
+                                    <h4 class="mb-2">Healthcare</h4>
+                                    <a href="#industries" class="text-accent small">Learn More <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 08 Aviation & Airports -->
+            <section id="airports" class="advanced-section-airport">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2">
+                            <div class="glass-panel text-center" data-tilt data-tilt-max="5" data-tilt-speed="400"
+                                data-tilt-glare="true" data-tilt-max-glare="0.2">
+                                <h5 class="text-accent mb-3">04 / AVIATION SECURITY</h5>
+                                <h2 class="display-5 fw-bold mb-4 text-white">Security Service In Airport</h2>
+                                <p class="text-white lead mb-4">Securing complex airport infrastructures with advanced
+                                    screening, perimeter defense, and rapid threat response protocols. We ensure smooth
+                                    operations without compromising safety.</p>
+                                <div class="d-flex flex-column flex-md-row justify-content-center gap-4 gap-md-5 text-center mt-5">
+                                    <div>
+                                        <h3 class="text-accent mb-1"><i class="fa-solid fa-plane-departure"></i></h3>
+                                        <span class="small fw-bold text-white tracking-widest">24/7 MONITORING</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-accent mb-1"><i><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></i></h3>
+                                        <span class="small fw-bold text-white tracking-widest">TSA COMPLIANT</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-accent mb-1"><i class="fa-solid fa-expand"></i></h3>
+                                        <span class="small fw-bold text-white tracking-widest">PERIMETER DEFENSE</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 09 Theatres & Entertainment -->
+            <section id="theatres" class="advanced-section-theatre">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7">
+                            <div class="theatre-img-box">
+                                <img src="assets/images/Protecting%20the%20Experience.png"
+                                    alt="Protecting the Experience">
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="theatre-content-box">
+                                <h5 class="text-accent mb-3">05 / ENTERTAINMENT</h5>
+                                <h2 class="display-5 fw-bold mb-4">Protecting the Experience</h2>
+                                <p class="text-secondary mb-4">From crowd management to VIP protection, our theatre
+                                    security solutions ensure that your patrons can focus purely on the performance.</p>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-3 d-flex align-items-center"><i
+                                            class="fa-solid fa-check-circle text-accent me-3 fs-5"></i> <span
+                                            class="text-secondary">Unobtrusive Crowd Control</span></li>
+                                    <li class="mb-3 d-flex align-items-center"><i
+                                            class="fa-solid fa-check-circle text-accent me-3 fs-5"></i> <span
+                                            class="text-secondary">Emergency Evacuation Protocols</span></li>
+                                    <li class="mb-3 d-flex align-items-center"><i
+                                            class="fa-solid fa-check-circle text-accent me-3 fs-5"></i> <span
+                                            class="text-secondary">Access & Ticket Management</span></li>
+                                </ul>
+                                <a href="#contact" class="btn-primary-premium btn-premium w-100 text-center">Request
+                                    Consultation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </section>
+        <!-- TECHNOLOGY SECTION ANCHOR -->
+        <div id="technology"></div>
+
+        <!-- TECHNOLOGY - CCTV SURVEILLANCE -->
+        <section id="cctv-surveillance" class="section-padding bg-secondary-custom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="img-box glow-container">
+                            <img src="assets/images/CCTV%20Systems.png" class="img-fluid rounded shadow-lg w-100" style="object-fit: cover;" alt="CCTV Systems">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 offset-lg-1">
+                        <h5 class="text-accent mb-3">01 / SURVEILLANCE</h5>
+                        <h2 class="display-5 fw-bold mb-4">CCTV Systems</h2>
+                        <p class="text-secondary lead mb-4">AI-powered camera networks offering 360-degree visibility, facial recognition, and automated threat alerts to keep your premises secure.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-check-circle text-accent me-3 fs-5"></i> <span class="text-secondary">Real-time AI Threat Detection</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-check-circle text-accent me-3 fs-5"></i> <span class="text-secondary">Night Vision & Thermal Imaging</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-check-circle text-accent me-3 fs-5"></i> <span class="text-secondary">Cloud Storage Integration</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNOLOGY - ACCESS CONTROL -->
+        <section id="access-control" class="section-padding bg-primary-custom">
+            <div class="container">
+                <div class="row align-items-center flex-row-reverse">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="img-box glow-container">
+                            <img src="assets/images/Smart%20Access%20Control.png" class="img-fluid rounded shadow-lg w-100" style="object-fit: cover;" alt="Smart Access Control">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 me-auto">
+                        <h5 class="text-accent mb-3">02 / ACCESS</h5>
+                        <h2 class="display-5 fw-bold mb-4">Smart Access Control</h2>
+                        <p class="text-secondary lead mb-4">Biometric scanners, smart keycards, and mobile credentials ensuring only authorized personnel enter restricted zones.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-check-circle text-accent me-3 fs-5"></i> <span class="text-secondary">Biometric & Retina Scanners</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-check-circle text-accent me-3 fs-5"></i> <span class="text-secondary">Mobile Credential Integration</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-check-circle text-accent me-3 fs-5"></i> <span class="text-secondary">Automated Logging & Reporting</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNOLOGY - VISITOR MANAGEMENT -->
+        <section id="visitor-management" class="section-padding bg-secondary-custom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="img-box glow-container">
+                            <img src="assets/images/Visitor%20Management.png" class="img-fluid rounded shadow-lg w-100" style="object-fit: cover;" alt="Visitor Management">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 offset-lg-1">
+                        <h5 class="text-accent mb-3">03 / TRACKING</h5>
+                        <h2 class="display-5 fw-bold mb-4">Visitor Management</h2>
+                        <p class="text-secondary lead mb-4">Streamlined digital check-ins, automated badge printing, and real-time tracking for all guests on your premises.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-check-circle text-accent me-3 fs-5"></i> <span class="text-secondary">Self-Service Kiosks</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-check-circle text-accent me-3 fs-5"></i> <span class="text-secondary">Instant Host Notifications</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-check-circle text-accent me-3 fs-5"></i> <span class="text-secondary">Digital NDA Signing</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNOLOGY - ALARM SYSTEMS -->
+        <section id="alarm-systems" class="section-padding bg-primary-custom border-bottom">
+            <div class="container">
+                <div class="row align-items-center flex-row-reverse">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="img-box glow-container">
+                            <img src="assets/images/Intelligent%20Alarms.png" class="img-fluid rounded shadow-lg w-100" style="object-fit: cover;" alt="Intelligent Alarms">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 me-auto">
+                        <h5 class="text-accent mb-3">04 / RESPONSE</h5>
+                        <h2 class="display-5 fw-bold mb-4">Intelligent Alarms</h2>
+                        <p class="text-secondary lead mb-4">High-decibel alerts instantly linked to our 24/7 command center and local authorities for immediate dispatch.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-check-circle text-accent me-3 fs-5"></i> <span class="text-secondary">Instant Command Center Link</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-check-circle text-accent me-3 fs-5"></i> <span class="text-secondary">Silent Panic Options</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="fa-solid fa-check-circle text-accent me-3 fs-5"></i> <span class="text-secondary">Tamper-Proof Wiring</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12 - SECURITY STATISTICS -->
+        <section id="statistics" class="section-padding bg-primary-custom statistics-section">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-number"><span class="counter" data-target="24">0</span><span
+                                    class="text-accent">/7</span></div>
+                            <div class="stat-label">Monitoring</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-number"><span class="counter" data-target="99">0</span><span
+                                    class="text-accent">%</span></div>
+                            <div class="stat-label">Response Readiness</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-number"><span class="counter" data-target="15">0</span><span
+                                    class="text-accent">+</span></div>
+                            <div class="stat-label">Industries Protected</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-number"><span class="counter" data-target="100">0</span><span
+                                    class="text-accent">%</span></div>
+                            <div class="stat-label">Commitment</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13 - SECURITY PROCESS -->
+        <section id="process" class="section-padding bg-secondary-custom process-section">
+            <div class="container text-center">
+                <h5 class="text-accent mb-3">HOW WE WORK</h5>
+                <h2 class="display-5 fw-bold mb-5">The Security Process</h2>
+
+                <div class="process-path">
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <h4>Assess</h4>
+                        <p class="small text-secondary">Identify risks & vulnerabilities.</p>
+                    </div>
+                    <div class="process-line"></div>
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                        <h4>Plan</h4>
+                        <p class="small text-secondary">Design a tailored strategy.</p>
+                    </div>
+                    <div class="process-line"></div>
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fa-solid fa-shield-cat"></i></div>
+                        <h4>Deploy</h4>
+                        <p class="small text-secondary">Implement personnel & tech.</p>
+                    </div>
+                    <div class="process-line"></div>
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fa-solid fa-desktop"></i></div>
+                        <h4>Monitor</h4>
+                        <p class="small text-secondary">24/7 command center vigilance.</p>
+                    </div>
+                    <div class="process-line"></div>
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h4>Respond</h4>
+                        <p class="small text-secondary">Immediate action when needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 14 - WHY CHOOSE US -->
+        <section id="why-choose-us" class="section-padding bg-primary-custom relative-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 text-center order-lg-2 mb-5 mb-lg-0">
+                        <div class="shield-illustration">
+                            <div class="pulse-ring"></div>
+                            <i class="fa-solid fa-shield-virus display-1 text-accent"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <h5 class="text-accent mb-3">THE SHIELDCORE ADVANTAGE</h5>
+                        <h2 class="display-5 fw-bold mb-5">Why Choose Us</h2>
+                        <ul class="list-unstyled mt-4">
+                            <li class="d-flex align-items-start mb-4">
+                                <div class="me-4 mt-1">
+                                    <i class="fa-solid fa-user-shield text-accent fs-2"></i>
+                                </div>
+                                <div>
+                                    <h4 class="mb-2">Trained Security Professionals</h4>
+                                    <p class="text-secondary mb-0">Rigorous vetting and continuous training ensure top-tier performance.</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start mb-4">
+                                <div class="me-4 mt-1">
+                                    <i class="fa-solid fa-video text-accent fs-2"></i>
+                                </div>
+                                <div>
+                                    <h4 class="mb-2">Technology-Driven Monitoring</h4>
+                                    <p class="text-secondary mb-0">We leverage AI-assisted CCTV and access control to stay ahead of threats.</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start mb-4">
+                                <div class="me-4 mt-1">
+                                    <i class="fa-solid fa-bolt text-accent fs-2"></i>
+                                </div>
+                                <div>
+                                    <h4 class="mb-2">Rapid Response</h4>
+                                    <p class="text-secondary mb-0">Our protocols are designed to minimize reaction times significantly.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 15 - EMERGENCY CTA -->
+        <section id="cta" class="cta-section bg-secondary-custom overflow-hidden relative-section text-center"
+            style="padding: 100px 0;">
+            <div class="cta-background-particles" id="cta-particles"></div>
+            <div class="container relative-section z-2">
+                <h2 class="display-4 fw-bold mb-4 text-white">Your Security Should Never Be an Afterthought.</h2>
+                <p class="lead text-light mb-5 max-w-700 mx-auto">Let's design a security solution built around your
+                    people, property, and operational needs.</p>
+                <a href="#contact" class="btn-premium btn-primary-premium btn-lg cta-magnetic">
+                    Request Security Assessment <i class="fa-solid fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- 18 - CONTACT SECTION -->
+        <section id="contact" class="section-padding bg-secondary-custom">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card bg-primary-custom border-0 shadow-lg" style="border-radius: 1.5rem; overflow: hidden; color: var(--text-primary);">
+                            <div class="p-4 p-md-5">
+                                <h5 class="text-accent mb-3 text-center">GET IN TOUCH</h5>
+                                <h2 class="display-5 fw-bold mb-4 text-center">Let's Build a Safer Environment.</h2>
+                                <ul class="feature-list mb-4 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 gap-md-4 list-unstyled">
+                                    <li><i class='fa-solid fa-check text-accent me-2'></i> 24/7 Command Center</li>
+                                    <li><i class='fa-solid fa-check text-accent me-2'></i> Free Security Assessment</li>
+                                </ul>
+                                <form class="mt-4">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control" placeholder="Email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn-premium btn-primary-premium w-100">Send Message</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="main-footer bg-secondary-custom section-padding pb-0 border-top">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6 pe-lg-5">
+                    <a href="#home" class="footer-logo mb-4 d-inline-flex align-items-center text-decoration-none">
+                        <span class="logo-shield d-inline-flex align-items-center me-2"><img src="assets/images/logo.svg" alt="Shieldcore" width="40" height="40"></span>
+                        <span class="h4 mb-0 fw-bold">SHIELDCORE</span>
+                    </a>
+                    <p class="text-secondary mb-4">Advanced security solutions designed to protect people, businesses,
+                        properties, and critical environments. 24/7 protection that never takes a break.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-sm btn-outline-premium"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-premium"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-premium"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h4>Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="#services">Corporate Security</a></li>
+                            <li><a href="#services">Residential Security</a></li>
+                            <li><a href="#services">Bank Security</a></li>
+                            <li><a href="#services">Retail Security</a></li>
+                            <li><a href="#services">Event Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h4>Industries</h4>
+                        <ul class="footer-links">
+                            <li><a href="#industries">IT Companies</a></li>
+                            <li><a href="#industries">Healthcare</a></li>
+                            <li><a href="#industries">Airports</a></li>
+                            <li><a href="#industries">Shopping Malls</a></li>
+                            <li><a href="#industries">Theatres</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <h4>Contact Us</h4>
+                        <ul class="footer-links">
+                            <li class="d-flex align-items-start gap-3 text-secondary mb-3">
+                                <i class="fa-solid fa-location-dot mt-1 text-accent"></i>
+                                <span>120 Security Plaza, Financial District,<br>New York, NY 10004</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-3 text-secondary mb-3">
+                                <i class="fa-solid fa-phone text-accent"></i>
+                                <span>+1 (800) 555-0199</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-3 text-secondary mb-4">
+                                <i class="fa-solid fa-envelope text-accent"></i>
+                                <span>contact@shieldcore.com</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="btn-premium btn-outline-premium w-100">Contact Support</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p class="mb-2 mb-md-0">&copy; 2026 Shieldcore Security. All rights reserved.</p>
+                <div class="d-flex gap-4">
+                    <a href="#" class="text-muted text-decoration-none hover-text-accent">Privacy Policy</a>
+                    <a href="#" class="text-muted text-decoration-none hover-text-accent">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Vanilla Tilt for 3D Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
