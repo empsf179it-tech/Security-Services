@@ -403,7 +403,7 @@ ul {
 }
 
 .mobile-links li {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .mobile-links a {
@@ -411,6 +411,12 @@ ul {
   font-family: var(--font-heading);
   font-size: 1.1rem;
   font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.mobile-links a:hover,
+.mobile-links a.active {
+  color: var(--accent);
 }
 
 .mobile-dropdown-toggle {
@@ -463,7 +469,7 @@ body.no-scroll {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-color: transparent;
+  background-color: #07111F; /* Always dark background */
 }
 
 .hero-label {
@@ -474,11 +480,11 @@ body.no-scroll {
 }
 
 .hero-title {
-  color: var(--text-primary);
+  color: #FFFFFF;
 }
 
 .hero-subtitle {
-  color: var(--text-secondary);
+  color: #B8C4D1;
   max-width: 600px;
 }
 
@@ -599,7 +605,7 @@ body.no-scroll {
 .floating-badge {
   position: absolute;
   top: 20%;
-  left: -5%;
+  left: 0;
   background: var(--bg-secondary);
   padding: 1rem 1.5rem;
   border-radius: 4px;
@@ -1369,4 +1375,136 @@ body.no-scroll {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* =========================================
+   MOBILE & TABLET ALIGNMENT
+   ========================================= */
+@media (max-width: 991.98px) {
+  main section:not(.hero-section) h1, 
+  main section:not(.hero-section) h2, 
+  main section:not(.hero-section) h3, 
+  main section:not(.hero-section) h4, 
+  main section:not(.hero-section) h5, 
+  main section:not(.hero-section) h6, 
+  main section:not(.hero-section) p, 
+  main section:not(.hero-section) .text-secondary {
+    text-align: center !important;
+  }
+
+  main section:not(.hero-section) .btn-premium {
+    display: flex !important;
+    width: fit-content;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  main section:not(.hero-section) ul.feature-list, 
+  main section:not(.hero-section) ul.list-unstyled {
+    text-align: center !important;
+  }
+
+  main section:not(.hero-section) ul.list-unstyled li.d-flex,
+  main section:not(.hero-section) ul.feature-list li {
+    justify-content: center !important;
+  }
+
+  main #why-choose-us ul.list-unstyled li.d-flex {
+    flex-direction: column;
+    align-items: center !important;
+  }
+
+  main #why-choose-us ul.list-unstyled li.d-flex > div:first-child {
+    margin-right: 0 !important;
+    margin-bottom: 1rem;
+  }
+}
+
+/* =========================================
+   FORMS & ACCORDION
+   ========================================= */
+.form-control {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+.form-control:focus {
+  background-color: var(--bg-secondary);
+  border-color: var(--accent);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 0.25rem rgba(244, 201, 93, 0.25);
+}
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+.custom-accordion .accordion-button {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  box-shadow: none !important;
+}
+.custom-accordion .accordion-button:not(.collapsed) {
+  background-color: var(--bg-secondary);
+  color: var(--accent);
+}
+.custom-accordion .accordion-button::after {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+[data-theme="light"] .custom-accordion .accordion-button::after {
+  filter: none;
+}
+
+/* =========================================
+   FOOTER & BACK TO TOP
+   ========================================= */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+.footer-links a {
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  display: inline-block;
+}
+.footer-links a:hover {
+  color: var(--accent);
+  transform: translateX(5px);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent);
+  color: #07111F;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+  z-index: 1000;
+  box-shadow: 0 5px 15px var(--shadow);
+}
+.back-to-top.active {
+  opacity: 1;
+  visibility: visible;
+  bottom: 30px;
+}
+.back-to-top:hover {
+  background-color: var(--bg-primary);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 15px var(--glow);
 }

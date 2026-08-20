@@ -96,13 +96,18 @@
     <!-- Mobile Navigation Panel -->
     <div id="nav-overlay" class="nav-overlay"></div>
     <aside id="mobile-nav-panel" class="mobile-nav-panel">
-        <div class="mobile-nav-header d-flex align-items-center">
-            <span class="logo-shield d-inline-flex align-items-center me-2"><img src="assets/images/logo.svg" alt="Shieldcore" width="32" height="32"></span>
-            <span class="logo-text">SHIELDCORE</span>
+        <div class="mobile-nav-header d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <span class="logo-shield d-inline-flex align-items-center me-2"><img src="assets/images/logo.svg" alt="Shieldcore" width="32" height="32"></span>
+                <span class="logo-text">SHIELDCORE</span>
+            </div>
+            <button id="mobile-menu-close" class="mobile-btn" aria-label="Close Menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
         </div>
         <div class="mobile-nav-content">
             <ul class="mobile-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li>
                     <a href="#services" class="mobile-dropdown-toggle">Services <i
@@ -168,13 +173,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Scroll Indicator -->
-            <div class="scroll-indicator">
-                <span>Scroll</span>
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-            </div>
+
         </section>
 
         <!-- Other sections will go here... -->
@@ -435,7 +434,7 @@
                                 </div>
                                 <div class="card-overlay"></div>
                                 <div
-                                    class="card-content p-3 text-center w-100 h-100 d-flex flex-column justify-content-center">
+                                    class="card-content p-4 pb-5 text-center w-100">
                                     <h4 class="mb-2">Retail & Malls</h4>
                                     <a href="#industries" class="text-accent small">Learn More <i
                                             class="fa-solid fa-arrow-right"></i></a>
@@ -449,7 +448,7 @@
                                 </div>
                                 <div class="card-overlay"></div>
                                 <div
-                                    class="card-content p-3 text-center w-100 h-100 d-flex flex-column justify-content-center">
+                                    class="card-content p-4 pb-5 text-center w-100">
                                     <h4 class="mb-2">Healthcare</h4>
                                     <a href="#industries" class="text-accent small">Learn More <i
                                             class="fa-solid fa-arrow-right"></i></a>
@@ -763,17 +762,19 @@
         <!-- 18 - CONTACT SECTION -->
         <section id="contact" class="section-padding bg-secondary-custom">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="card bg-primary-custom border-0 shadow-lg" style="border-radius: 1.5rem; overflow: hidden; color: var(--text-primary);">
-                            <div class="p-4 p-md-5">
-                                <h5 class="text-accent mb-3 text-center">GET IN TOUCH</h5>
-                                <h2 class="display-5 fw-bold mb-4 text-center">Let's Build a Safer Environment.</h2>
-                                <ul class="feature-list mb-4 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 gap-md-4 list-unstyled">
-                                    <li><i class='fa-solid fa-check text-accent me-2'></i> 24/7 Command Center</li>
-                                    <li><i class='fa-solid fa-check text-accent me-2'></i> Free Security Assessment</li>
-                                </ul>
-                                <form class="mt-4">
+                <div class="row text-center mb-5">
+                    <div class="col-12">
+                        <h5 class="text-accent mb-3">GET IN TOUCH</h5>
+                        <h2 class="display-5 fw-bold">Let's Build a Safer Environment.</h2>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <!-- Left Column: Form & Socials -->
+                    <div class="col-lg-6">
+                        <div class="card bg-primary-custom border-0 shadow-lg h-100" style="border-radius: 1.5rem; overflow: hidden; color: var(--text-primary);">
+                            <div class="p-4 p-md-5 d-flex flex-column h-100">
+                                <h4 class="mb-4">Send us a Message</h4>
+                                <form class="flex-grow-1">
                                     <div class="mb-3">
                                         <input type="text" class="form-control" placeholder="Name" required>
                                     </div>
@@ -783,8 +784,72 @@
                                     <div class="mb-3">
                                         <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
                                     </div>
-                                    <button type="submit" class="btn-premium btn-primary-premium w-100">Send Message</button>
+                                    <button type="submit" class="btn-premium btn-primary-premium w-100 mb-4">Send Message</button>
                                 </form>
+                                
+                                <!-- Social Icons -->
+                                <div class="text-center mt-auto pt-4 border-top" style="border-color: var(--border) !important;">
+                                    <h6 class="mb-3 text-secondary">Connect With Us</h6>
+                                    <div class="d-flex justify-content-center gap-3">
+                                        <a href="#" class="btn btn-outline-premium rounded-circle" style="width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;"><i class="fa-brands fa-linkedin-in"></i></a>
+                                        <a href="#" class="btn btn-outline-premium rounded-circle" style="width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="#" class="btn btn-outline-premium rounded-circle" style="width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;"><i class="fa-brands fa-facebook-f"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: FAQ & Map -->
+                    <div class="col-lg-6">
+                        <!-- FAQ Accordion -->
+                        <div class="mb-5">
+                            <h4 class="mb-4">Frequently Asked Questions</h4>
+                            <div class="accordion custom-accordion" id="faqAccordion">
+                                <div class="accordion-item bg-primary-custom mb-3 shadow-sm" style="border-radius: 0.5rem; overflow: hidden; border: 1px solid var(--border);">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                            What areas do you serve?
+                                        </button>
+                                    </h2>
+                                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body text-secondary">
+                                            We provide comprehensive security services across the entire metropolitan area and surrounding regions. Contact us for specific location coverage.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item bg-primary-custom mb-3 shadow-sm" style="border-radius: 0.5rem; overflow: hidden; border: 1px solid var(--border);">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                            Do you offer 24/7 monitoring?
+                                        </button>
+                                    </h2>
+                                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body text-secondary">
+                                            Yes, our state-of-the-art command center operates 24/7, 365 days a year to ensure continuous protection and immediate response.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item bg-primary-custom mb-3 shadow-sm" style="border-radius: 0.5rem; overflow: hidden; border: 1px solid var(--border);">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                            Are your guards armed or unarmed?
+                                        </button>
+                                    </h2>
+                                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body text-secondary">
+                                            We offer both highly trained armed and unarmed security professionals, depending on your specific requirements and risk assessment.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Map -->
+                        <div>
+                            <h4 class="mb-4">Our Location</h4>
+                            <div class="map-container" style="border-radius: 1rem; overflow: hidden; height: 250px; border: 1px solid var(--border); box-shadow: 0 10px 30px var(--shadow);">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.2528000654!2d-74.14448744573887!3d40.69766374865766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1693000000000!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
@@ -862,12 +927,20 @@
             <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
                 <p class="mb-2 mb-md-0">&copy; 2026 Shieldcore Security. All rights reserved.</p>
                 <div class="d-flex gap-4">
-                    <a href="#" class="text-muted text-decoration-none hover-text-accent">Privacy Policy</a>
-                    <a href="#" class="text-muted text-decoration-none hover-text-accent">Terms of Service</a>
+                    <a href="#" class="text-secondary text-decoration-none hover-text-accent">Privacy Policy</a>
+                    <a href="#" class="text-secondary text-decoration-none hover-text-accent">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="back-to-top" aria-label="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Three.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>

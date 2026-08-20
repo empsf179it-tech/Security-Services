@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initNavigation();
   initThreeJSHero();
+  initBackToTop();
 });
 
 /**
@@ -62,6 +63,15 @@ function initNavigation() {
       overlay.classList.remove('active');
       document.body.classList.remove('no-scroll');
     });
+
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    if (mobileMenuClose) {
+      mobileMenuClose.addEventListener('click', () => {
+        mobileNavPanel.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+      });
+    }
   }
 
   // Mobile Accordion Logic
@@ -313,6 +323,27 @@ function initMagneticButtons() {
 
     magnet.addEventListener('mouseleave', () => {
       magnet.style.transform = `translate(0px, 0px)`;
+    });
+  });
+}
+
+function initBackToTop() {
+  const backToTop = document.getElementById('back-to-top');
+  if (!backToTop) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTop.classList.add('active');
+    } else {
+      backToTop.classList.remove('active');
+    }
+  });
+
+  backToTop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
   });
 }
