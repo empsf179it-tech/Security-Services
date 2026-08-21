@@ -6,6 +6,7 @@
   --bg-secondary: #f4f7fa;
   --accent: #F4C95D;
   /* Security Gold */
+  --nav-active: #C48B00;
 
   /* Text */
   --text-primary: #07111F;
@@ -40,6 +41,7 @@
   --shadow: rgba(0, 0, 0, 0.35);
   --shadow-hover: rgba(0, 0, 0, 0.5);
   --glow: rgba(244, 201, 93, 0.5);
+  --nav-active: #F4C95D;
 }
 
 /* Base Reset & Typography */
@@ -95,6 +97,10 @@ ul {
 /* Utilities */
 .text-accent {
   color: var(--accent) !important;
+}
+
+.hover-text-accent:hover {
+  color: var(--nav-active) !important;
 }
 
 .bg-primary-custom {
@@ -217,6 +223,10 @@ ul {
   text-decoration: none;
 }
 
+.navbar-brand:hover {
+  color: var(--nav-active);
+}
+
 .logo-shield {
   color: var(--accent);
   font-size: 1.5rem;
@@ -246,7 +256,7 @@ ul {
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  color: var(--text-primary);
+  color: var(--nav-active);
 }
 
 .nav-links li a::after {
@@ -256,7 +266,7 @@ ul {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--accent);
+  background-color: var(--nav-active);
   transition: width var(--transition-normal);
 }
 
@@ -416,7 +426,7 @@ ul {
 
 .mobile-links a:hover,
 .mobile-links a.active {
-  color: var(--accent);
+  color: var(--nav-active);
 }
 
 .mobile-dropdown-toggle {
@@ -486,6 +496,16 @@ body.no-scroll {
 .hero-subtitle {
   color: #B8C4D1;
   max-width: 600px;
+}
+
+.hero-section .btn-outline-premium {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.hero-section .btn-outline-premium:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .scroll-indicator {
@@ -1026,6 +1046,7 @@ body.no-scroll {
   border-radius: 8px;
   border: 1px solid var(--border);
   transition: transform var(--transition-normal);
+  height: 100%;
 }
 
 .stat-card:hover {

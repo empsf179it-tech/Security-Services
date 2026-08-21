@@ -92,6 +92,19 @@ function initNavigation() {
       }
     });
   });
+
+  // Active state for nav links on click
+  const navLinks = document.querySelectorAll('.nav-links a, .mobile-links a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      // Don't apply to dropdown toggles
+      if (this.classList.contains('mobile-dropdown-toggle')) return;
+      if (this.nextElementSibling && this.nextElementSibling.classList.contains('dropdown-menu-custom')) return;
+      
+      navLinks.forEach(a => a.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
 }
 
 /**
