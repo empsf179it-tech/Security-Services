@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initThreeJSHero();
   initBackToTop();
+  initScrollSpy();
 });
 
 /**
@@ -360,3 +361,72 @@ function initBackToTop() {
     });
   });
 }
+
+/**
+ * ScrollSpy for Navigation
+ */
+function initScrollSpy() {
+  const navLinks = document.querySelectorAll('.nav-links a, .mobile-links a');
+  
+  const sectionsSet = new Set();
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && href.startsWith('#') && href.length > 1) {
+      const el = document.querySelector(href);
+      if (el) {
+        sectionsSet.add(el);
+      }
+    }
+  });
+
+  const sections = Array.from(sectionsSet);
+
+  const onScroll = () => {
+    let current = '';
+    
+    const sectionsWithPos = sections.map(section => ({
+      id: section.getAttribute('id'),
+      top: section.getBoundingClientRect().top
+    }));
+    
+    sectionsWithPos.sort((a, b) => a.top - b.top);
+    
+    sectionsWithPos.forEach(section => {
+      // Trigger active state when section is within 250px from the top of the viewport
+      if (section.top <= 250) {
+        current = section.id;
+      }
+    });
+
+    // Handle scrolled to absolute bottom
+    if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight - 50) {
+       if (sectionsWithPos.length > 0) {
+           current = sectionsWithPos[sectionsWithPos.length - 1].id;
+       }
+    }
+
+    if (current) {
+      // Remove active class from all links
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      // Add active class to current matching links and their parent dropdowns
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+          
+          const parentDropdown = link.closest('.dropdown-menu-custom, .mobile-dropdown-content');
+          if (parentDropdown && parentDropdown.previousElementSibling) {
+            parentDropdown.previousElementSibling.classList.add('active');
+          }
+        }
+      });
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  // Initial check
+  setTimeout(onScroll, 100);
+}
+
